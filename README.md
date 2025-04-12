@@ -115,7 +115,7 @@ Este proyecto está licenciado bajo la Licencia MIT - vea el archivo [LICENSE](L
 ## Contacto
 
 María Jesús Puerta Angulo - [@engimine](https://github.com/engimine)
-
+mjpaupc@gmail.com
 URL del Proyecto: [https://github.com/engimine/proyecto-esperanza](https://github.com/engimine/proyecto-esperanza)
 
-Sitio Web: [https://kehhfcfb.manus.space](https://kehhfcfb.manus.space)
+
