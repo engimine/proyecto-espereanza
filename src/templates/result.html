@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Proyecto Esperanza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Proyecto Esperanza</h1>
+                <p>Detección de Cáncer de Mama mediante Imágenes Histopatológicas</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('about') }}">Acerca del Proyecto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="results-section">
+            <div class="container">
+                <h2>Resultados del Análisis</h2>
+                
+                {% if demo_mode %}
+                <div class="demo-warning">
+                    <p><strong>Modo Demo:</strong> El modelo no está cargado. Este es un resultado aleatorio con fines demostrativos.</p>
+                </div>
+                {% endif %}
+                
+                <div class="results-container {% if is_malignant %}malignant{% else %}benign{% endif %}">
+                    <div class="result-image">
+                        <img src="data:image/png;base64,{{ image_b64 }}" alt="Imagen analizada con resultados">
+                    </div>
+                    
+                    <div class="result-details">
+                        <div class="result-header">
+                            <h3>Predicción: <span class="result-value">{{ result }}</span></h3>
+                            <p class="confidence">Confianza: <span class="confidence-value">{{ "%.2f"|format(confidence) }}%</span></p>
+                        </div>
+                        
+                        <div class="result-interpretation">
+                            {% if is_malignant %}
+                            <h4>Interpretación:</h4>
+                            <p>La imagen analizada muestra características consistentes con tejido <strong>maligno</strong>. El modelo ha detectado patrones que sugieren la presencia de células cancerosas.</p>
+                            <div class="warning-box">
+                                <p><strong>Importante:</strong> Esta predicción debe ser confirmada por un patólogo. Esta herramienta es solo un apoyo al diagnóstico profesional.</p>
+                            </div>
+                            {% else %}
+                            <h4>Interpretación:</h4>
+                            <p>La imagen analizada muestra características consistentes con tejido <strong>benigno</strong>. El modelo no ha detectado patrones que sugieran la presencia de células cancerosas.</p>
+                            <div class="info-box">
+                                <p><strong>Nota:</strong> Aunque la predicción es benigna, siempre es recomendable la confirmación por un patólogo profesional.</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <a href="{{ url_for('index') }}" class="btn secondary-btn">Analizar otra imagen</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="disclaimer-section">
+            <div class="container">
+                <h3>Limitaciones y Consideraciones</h3>
+                <ul>
+                    <li>Esta herramienta está diseñada como apoyo al diagnóstico, no como sustituto del juicio clínico profesional.</li>
+                    <li>El modelo Esperanza Ultra-Ligero tiene una precisión del 82.17% y un AUC de 90.35% en los conjuntos de prueba.</li>
+                    <li>Los resultados pueden variar dependiendo de la calidad de la imagen y otros factores técnicos.</li>
+                    <li>Siempre consulte con un profesional médico calificado para el diagnóstico definitivo.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Proyecto Esperanza - Desarrollado por María Jesús Puerta Angulo</p>
+            <p class="disclaimer">Esta herramienta es solo para fines educativos y de investigación. No sustituye el diagnóstico profesional.</p>
+        </div>
+    </footer>
+</body>
+</html>

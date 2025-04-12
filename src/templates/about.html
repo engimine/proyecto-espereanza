@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca del Proyecto - Proyecto Esperanza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Proyecto Esperanza</h1>
+                <p>Detección de Cáncer de Mama mediante Imágenes Histopatológicas</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('about') }}" class="active">Acerca del Proyecto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h2>La Historia detrás del Proyecto Esperanza</h2>
+                <div class="author-info">
+                    <div class="author-image">
+                        <!-- Placeholder for author image -->
+                        <div class="author-placeholder">MJ</div>
+                    </div>
+                    <div class="author-bio">
+                        <h3>María Jesús Puerta Angulo</h3>
+                        <p class="author-title">Ingeniera de Minas e Innovadora en Detección de Cáncer</p>
+                        <p class="author-quote">"Si yo, ingeniera de minas, he podido entrenar un modelo para detectar patrones cancerígenos, estoy convencida de que hay un camino para seguir mejorando estas técnicas y salvar más vidas."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="personal-story">
+            <div class="container">
+                <h2>Mi Historia Personal</h2>
+                <div class="story-content">
+                    <p>Como ingeniera de minas, mi carrera profesional ha estado dedicada al mapeo y análisis de minerales. Durante años, he estudiado patrones, texturas y estructuras en rocas y formaciones geológicas, desarrollando un ojo entrenado para detectar anomalías y características específicas que revelan la presencia de minerales valiosos.</p>
+                    
+                    <p>Nunca imaginé que estos conocimientos técnicos se convertirían en una herramienta para combatir el cáncer de mama, hasta que la enfermedad tocó mi puerta.</p>
+                    
+                    <p>Todo comenzó cuando mi doctora detectó un nódulo altamente sospechoso durante una revisión rutinaria. Tuve la suerte de contar con una profesional meticulosa que insistió en repetir pruebas para confirmar el diagnóstico. El resultado fue claro: cáncer de mama.</p>
+                    
+                    <p>Durante mi tratamiento, mientras observaba las imágenes histopatológicas de mi propio tejido, tuve una revelación que cambiaría el rumbo de mi vida profesional. Los patrones que veía en esas imágenes médicas no eran tan diferentes de los que había analizado durante años en muestras de minerales.</p>
+                    
+                    <p>Las estructuras celulares, la distribución de tejidos, las anomalías... todo podía ser "mapeado" de manera similar a como analizaba formaciones geológicas. Las células cancerosas mostraban patrones de crecimiento irregular, cambios en la densidad y alteraciones estructurales que, conceptualmente, no eran tan distintos de las anomalías que buscaba en mis estudios geológicos.</p>
+                    
+                    <p>Así nació el Proyecto Esperanza, nombrado en honor a la esperanza que me mantuvo fuerte durante mi tratamiento y a la esperanza que quiero ofrecer a otras personas que enfrentan esta enfermedad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-details">
+            <div class="container">
+                <h2>Detalles Técnicos</h2>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h3>El Modelo Esperanza Ultra-Ligero</h3>
+                        <p>El modelo utiliza una arquitectura de red neuronal convolucional (CNN) optimizada para funcionar en entornos con recursos limitados. Está inspirado en técnicas de análisis de patrones minerales aplicadas a imágenes médicas.</p>
+                        <ul class="tech-specs">
+                            <li><strong>Precisión:</strong> 82.17%</li>
+                            <li><strong>AUC:</strong> 90.35%</li>
+                            <li><strong>Tamaño de imagen:</strong> 64×64 píxeles</li>
+                            <li><strong>Tiempo de entrenamiento:</strong> &lt;2 minutos en CPU</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h3>Analogía con el Mapeo de Minerales</h3>
+                        <p>La arquitectura del modelo refleja el proceso de análisis de minerales:</p>
+                        <ol>
+                            <li><strong>Primera capa:</strong> Identificación de patrones básicos (texturas y bordes)</li>
+                            <li><strong>Segunda capa:</strong> Reconocimiento de estructuras más complejas</li>
+                            <li><strong>Tercera capa:</strong> Análisis de regiones completas</li>
+                            <li><strong>Capa densa:</strong> Integración de todas las características</li>
+                            <li><strong>Capa de salida:</strong> Decisión final sobre malignidad</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <div class="container">
+                <h2>Impacto Potencial</h2>
+                <div class="impact-content">
+                    <p>El Proyecto Esperanza tiene como objetivo proporcionar una herramienta accesible para la detección temprana del cáncer de mama, especialmente en entornos con recursos limitados. Al ser un modelo ligero que puede funcionar en hardware estándar, puede implementarse en clínicas rurales, hospitales con infraestructura tecnológica reducida, o incluso como parte de unidades móviles de diagnóstico.</p>
+                    
+                    <p>Más allá de su aplicación práctica, este proyecto demuestra el poder de la transferencia de conocimientos entre disciplinas aparentemente no relacionadas. La experiencia en ingeniería de minas aplicada al campo médico abre nuevas perspectivas y enfoques innovadores para abordar problemas de salud complejos.</p>
+                    
+                    <div class="call-to-action">
+                        <h3>¿Quieres contribuir?</h3>
+                        <p>El Proyecto Esperanza es open source y está abierto a contribuciones de la comunidad científica y tecnológica. Si eres desarrollador, científico de datos, profesional médico o simplemente alguien interesado en mejorar la detección del cáncer de mama, tu ayuda es bienvenida.</p>
+                        <a href="https://github.com/proyecto-esperanza" class="btn primary-btn" target="_blank">Visitar repositorio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Proyecto Esperanza - Desarrollado por María Jesús Puerta Angulo</p>
+            <p class="disclaimer">Esta herramienta es solo para fines educativos y de investigación. No sustituye el diagnóstico profesional.</p>
+        </div>
+    </footer>
+</body>
+</html>
