@@ -1,5 +1,7 @@
 # Paper Técnico: Modelo Esperanza Ultra-Ligero para la Detección de Cáncer de Mama
 
+> **Aviso (octubre de 2026):** documento histórico de 2025. Las cifras de rendimiento que aparecen aquí (82,17 % y AUC 90,35 %) no están validadas: no hubo partición por paciente ni validación externa, y la descripción de los datos no es coherente. Ver el README.
+
 ## Resumen
 
 Este paper presenta el Modelo Esperanza Ultra-Ligero, una red neuronal convolucional (CNN) optimizada para la detección de cáncer de mama a partir de imágenes histopatológicas. El modelo está inspirado en técnicas de análisis de patrones utilizadas en la ingeniería de minas y está diseñado para funcionar en entornos con recursos computacionales limitados. Con una precisión del 82.17% y un AUC de 90.35%, el modelo demuestra que es posible crear herramientas efectivas para la detección de cáncer sin necesidad de infraestructura computacional avanzada. Este trabajo representa un ejemplo innovador de transferencia de conocimientos entre disciplinas aparentemente no relacionadas.

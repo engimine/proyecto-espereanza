@@ -1,5 +1,7 @@
 # Historia Personal: De la Ingeniería de Minas a la Detección de Cáncer de Mama
 
+> **Aviso (octubre de 2026):** documento histórico de 2025. Las cifras de rendimiento que aparecen aquí (82,17 % y AUC 90,35 %) no están validadas: no hubo partición por paciente ni validación externa, y la descripción de los datos no es coherente. Ver el README.
+
 Este documento narra la historia personal detrás del Proyecto Esperanza, mostrando cómo los conocimientos de ingeniería de minas pueden aplicarse de manera innovadora al campo médico.
 
 ## Mi Trayectoria como Ingeniera de Minas
