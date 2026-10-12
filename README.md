@@ -24,4 +24,8 @@ Esperanza continúa, ahora con variantes genéticas de BRCA1: un atlas que expli
 - `docs/historia_personal.md`: cómo nació la idea.
 - `docs/paper_tecnico.md`: documento técnico de 2025, con aviso.
 
-Licencia MIT · María Jesús Puerta Angulo
+## Autora
+
+María Jesús Puerta Angulo · [mariajesuspuertaangulo.com](https://mariajesuspuertaangulo.com) · [LinkedIn](https://www.linkedin.com/in/mariajesuspuertaangulo)
+
+Licencia MIT
